@@ -1,0 +1,3 @@
+[submodule "interconnect-made-easy"]
+	path = interconnect-made-easy
+	url = https://github.com/connexcs/interconnect-made-easy.git
