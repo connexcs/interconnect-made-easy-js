@@ -8,7 +8,7 @@ import addFormats from 'ajv-formats';
 import { OpenRateCard, ValidationResult, ValidationError } from './types';
 
 // Import the schema - will be bundled or loaded from the submodule
-import schema from '../interconnect-made-easy/schema/open-rate-card.schema.json';
+import schema from '../interconnect-made-easy/schema/interconnect-made-easy.schema.json';
 
 /**
  * Validator class for Open Rate Card documents

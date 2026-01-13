@@ -1,6 +1,6 @@
 {
   "name": "@connexcs/interconnect-made-easy",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "JavaScript/TypeScript implementation of the Open Rate Card specification for telecommunications rate cards",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -45,7 +45,7 @@
     "sip",
     "wholesale",
     "interconnect",
-    "open-rate-card"
+    "interconnect-made-easy"
   ],
   "author": "ConnexCS",
   "license": "MIT",

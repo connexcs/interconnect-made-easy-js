@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Solution: Copy schema files to `dist/interconnect-made-easy/schema/` during build process
   - Added post-build script to inject ESM import attributes (`with { type: 'json' }`) for Node.js 20+ compatibility
   - Both CommonJS and ESM builds now correctly resolve the schema file
-  - Fixes the error: `Cannot find module '../interconnect-made-easy/schema/open-rate-card.schema.json'`
+  - Fixes the error: `Cannot find module '../interconnect-made-easy/schema/interconnect-made-easy.schema.json'`
 
 ### Added
 - Build script `fix:esm` to add import attributes to ESM JSON imports
