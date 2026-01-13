@@ -1,6 +1,6 @@
 # Interconnect Made Easy - JavaScript/TypeScript Implementation
 
-[![npm version](https://badge.fury.io/js/interconnect-made-easy-js.svg)](https://badge.fury.io/js/interconnect-made-easy-js)
+[![npm version](https://badge.fury.io/js/%40connexcs%2Finterconnect-made-easy.svg)](https://www.npmjs.com/package/@connexcs/interconnect-made-easy)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A comprehensive JavaScript/TypeScript implementation of the [Open Rate Card specification](https://github.com/connexcs/interconnect-made-easy) for telecommunications rate cards. This library enables automated exchange of pricing, routing, and service information between VoIP carriers and wholesale providers.
@@ -19,13 +19,7 @@ A comprehensive JavaScript/TypeScript implementation of the [Open Rate Card spec
 ## Installation
 
 ```bash
-npm install interconnect-made-easy-js
-```
-
-Or using yarn:
-
-```bash
-yarn add interconnect-made-easy-js
+npm install @connexcs/interconnect-made-easy
 ```
 
 ## Quick Start
@@ -33,7 +27,7 @@ yarn add interconnect-made-easy-js
 ### Validate a Rate Card
 
 ```typescript
-import { validate, parseRateCard, isValidRateCard } from 'interconnect-made-easy-js';
+import { validate, parseRateCard, isValidRateCard } from '@connexcs/interconnect-made-easy';
 
 // Validate a JSON string or object
 const result = validate(rateCardJson);
@@ -56,7 +50,7 @@ if (isValidRateCard(data)) {
 ### Build a Rate Card
 
 ```typescript
-import { createRateCard } from 'interconnect-made-easy-js';
+import { createRateCard } from '@connexcs/interconnect-made-easy';
 
 const rateCard = createRateCard('ABC Telecom Rate Card')
   .version('1.0')
@@ -102,7 +96,7 @@ console.log(JSON.stringify(rateCard, null, 2));
 ### Add and Verify Checksum
 
 ```typescript
-import { addChecksum, verifyChecksum } from 'interconnect-made-easy-js';
+import { addChecksum, verifyChecksum } from '@connexcs/interconnect-made-easy';
 
 // Add checksum to document
 const docWithChecksum = await addChecksum(rateCard);
@@ -124,7 +118,7 @@ import {
   generatePemKeyPair, 
   signDocument, 
   verifySignature 
-} from 'interconnect-made-easy-js';
+} from '@connexcs/interconnect-made-easy';
 
 // Generate key pair
 const keyPair = await generatePemKeyPair('RS256');
@@ -148,7 +142,7 @@ if (result.valid) {
 ### Export to CSV
 
 ```typescript
-import { exportToCsv, exportCardToCsv, importFromCsv } from 'interconnect-made-easy-js';
+import { exportToCsv, exportCardToCsv, importFromCsv } from '@connexcs/interconnect-made-easy';
 
 // Export all cards
 const csvFiles = exportToCsv(rateCard);
@@ -176,7 +170,7 @@ import {
   filterRates,
   sortRates,
   getCardStatistics,
-} from 'interconnect-made-easy-js';
+} from '@connexcs/interconnect-made-easy';
 
 // Find rate for a phone number (longest prefix match)
 const match = findRateByPrefix(card, '+442071234567');
@@ -298,7 +292,7 @@ import type {
   ValidationResult,
   ValidationError,
   // ... and more
-} from 'interconnect-made-easy-js';
+} from '@connexcs/interconnect-made-easy';
 ```
 
 ## Browser Usage
@@ -306,7 +300,7 @@ import type {
 The library works in browsers via the bundled version:
 
 ```html
-<script src="node_modules/interconnect-made-easy-js/dist/browser/interconnect-made-easy.min.js"></script>
+<script src="node_modules/@connexcs/interconnect-made-easy/dist/browser/interconnect-made-easy.min.js"></script>
 <script>
   const { validate, createRateCard } = InterconnectMadeEasy;
   
@@ -318,17 +312,17 @@ The library works in browsers via the bundled version:
 Or with ES modules:
 
 ```javascript
-import { validate, createRateCard } from 'interconnect-made-easy-js';
+import { validate, createRateCard } from '@connexcs/interconnect-made-easy';
 ```
 
 ## Node.js Usage
 
 ```javascript
 // CommonJS
-const { validate, createRateCard } = require('interconnect-made-easy-js');
+const { validate, createRateCard } = require('@connexcs/interconnect-made-easy');
 
 // ES Modules
-import { validate, createRateCard } from 'interconnect-made-easy-js';
+import { validate, createRateCard } from '@connexcs/interconnect-made-easy';
 ```
 
 ## Specification Reference
