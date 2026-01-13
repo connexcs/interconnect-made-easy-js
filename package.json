@@ -1,11 +1,15 @@
 {
-  "name": "interconnect-made-easy-js",
-  "version": "1.0.0",
+  "name": "@connexcs/interconnect-made-easy",
+  "version": "0.1.0",
   "description": "JavaScript/TypeScript implementation of the Open Rate Card specification for telecommunications rate cards",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "browser": "dist/browser/interconnect-made-easy.min.js",
   "types": "dist/types/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "exports": {
     ".": {
       "import": "./dist/esm/index.js",
@@ -15,7 +19,10 @@
   },
   "files": [
     "dist",
-    "interconnect-made-easy/schema"
+    "interconnect-made-easy/schema",
+    "interconnect-made-easy/*.md",
+    "interconnect-made-easy/LICENSE",
+    "interconnect-made-easy/example.json"
   ],
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm && npm run build:browser && npm run build:types",
