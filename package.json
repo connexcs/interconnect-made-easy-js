@@ -1,6 +1,6 @@
 {
   "name": "@connexcs/interconnect-made-easy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "JavaScript/TypeScript implementation of the Open Rate Card specification for telecommunications rate cards",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -25,11 +25,13 @@
     "interconnect-made-easy/example.json"
   ],
   "scripts": {
-    "build": "npm run build:cjs && npm run build:esm && npm run build:browser && npm run build:types",
+    "build": "npm run build:cjs && npm run build:esm && npm run fix:esm && npm run build:browser && npm run build:types && npm run copy:schema",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:browser": "esbuild src/index.ts --bundle --minify --sourcemap --outfile=dist/browser/interconnect-made-easy.min.js --format=iife --global-name=InterconnectMadeEasy --platform=browser --external:fs --external:crypto",
     "build:types": "tsc -p tsconfig.types.json",
+    "copy:schema": "mkdir -p dist/interconnect-made-easy/schema && cp interconnect-made-easy/schema/*.json dist/interconnect-made-easy/schema/",
+    "fix:esm": "node scripts/fix-esm-imports.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
